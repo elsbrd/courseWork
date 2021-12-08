@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+<!--<div class="container pt-4">-->
+{% block body %}
+ 
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update/{{employee.userid}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="fullname" value="{{employee.fullname}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="email" value="{{employee.email}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="selectWork" value="{{employee.selectWork}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="technology" value="{{employee.technology}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="expireTime" value="{{employee.expireTime}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="price" value="{{employee.price}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+{% endblock %}
